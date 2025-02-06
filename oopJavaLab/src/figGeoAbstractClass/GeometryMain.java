@@ -7,11 +7,11 @@ abstract class Geometry {
     public abstract double area();
 }
 
-class Circle extends Geometry {
+class CircleAbs extends Geometry {
     private double radius;
 
     // Constructor
-    public Circle(double radius) {
+    public CircleAbs(double radius) {
         this.radius = radius;
     }
 
@@ -22,11 +22,11 @@ class Circle extends Geometry {
     }
 }
 
-class Rectangle extends Geometry {
+class RectangleAbs extends Geometry {
     private double length, breadth;
 
     // Constructor
-    public Rectangle(double length, double breadth) {
+    public RectangleAbs(double length, double breadth) {
         this.length = length;
         this.breadth = breadth;
     }
@@ -40,8 +40,8 @@ class Rectangle extends Geometry {
 
 public class GeometryMain {
     public static void main(String[] args) {
-        Geometry circle = new Circle(4.5); // Runtime polymorphism
-        Geometry rectangle = new Rectangle(5, 7); // Runtime polymorphism
+        Geometry circle = new CircleAbs(4.5); // Runtime polymorphism
+        Geometry rectangle = new RectangleAbs(5, 7); // Runtime polymorphism
 
         System.out.println("Area of Circle: " + circle.area());
         System.out.println("Area of Rectangle: " + rectangle.area());

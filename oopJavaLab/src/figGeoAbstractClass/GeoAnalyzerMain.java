@@ -7,11 +7,11 @@ interface GeoAnalyzer {
     double perimeter();
 }
 
-class Circle implements GeoAnalyzer {
+class CircleImp implements GeoAnalyzer {
     private double radius;
 
     // Constructor
-    public Circle(double radius) {
+    public CircleImp(double radius) {
         this.radius = radius;
     }
 
@@ -22,11 +22,11 @@ class Circle implements GeoAnalyzer {
     }
 }
 
-class Rectangle implements GeoAnalyzer {
+class RectangleImp implements GeoAnalyzer {
     private double length, breadth;
 
     // Constructor
-    public Rectangle(double length, double breadth) {
+    public RectangleImp(double length, double breadth) {
         this.length = length;
         this.breadth = breadth;
     }
@@ -40,8 +40,8 @@ class Rectangle implements GeoAnalyzer {
 
 public class GeoAnalyzerMain {
     public static void main(String[] args) {
-        GeoAnalyzer circle = new Circle(4.5); // Runtime polymorphism
-        GeoAnalyzer rectangle = new Rectangle(5, 7); // Runtime polymorphism
+        GeoAnalyzer circle = new CircleImp(4.5); // Runtime polymorphism
+        GeoAnalyzer rectangle = new RectangleImp(5, 7); // Runtime polymorphism
 
         System.out.println("Perimeter of Circle: " + circle.perimeter());
         System.out.println("Perimeter of Rectangle: " + rectangle.perimeter());
